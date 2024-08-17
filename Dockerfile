@@ -1,5 +1,5 @@
 # Builder
-FROM nginx:1.25.0-alpine
+FROM nginx:1.26.0-alpine
 
 WORKDIR /root
 
