@@ -1,0 +1,17 @@
+version: '3.3' 
+services:
+  nginx:
+    container_name: nginx
+    image: yilee01/nginx-acme:latest
+    restart: always
+    network_mode: "host"
+    volumes:
+      - ./cert:/cert
+      - ./conf.d:/etc/nginx/conf.d
+      - ./nginx.conf:/etc/nginx/conf.d
+    environment:
+      - CF_Token=[TOKEN]
+      - CF_Account_ID=[账号]
+      - DNS=dns_cf
+      - DOMAIN=[域名]
+      - EMAIL=[邮箱]
