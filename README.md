@@ -27,6 +27,8 @@ docker pull yilee01/nginx-acme
 + `/etc/nginx/nginx.conf`：nginx全局配置
 
 > 注意：使用需要传递下述命令中的环境变量给docker，供acme.sh使用
+>
+> 注意：默认使用 dns_cf（Cloudflare），其他域名参考[DNS  API](https://github.com/acmesh-official/acme.sh/wiki/dnsapi)
 
 ### 命令
 
